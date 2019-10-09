@@ -42,8 +42,8 @@ Há uma aplicação rodando os containers do mongodb e desse server em um soluç
 ### inserir uma string:
 - curl -X POST -H "Content-Type:application/json" http://34.69.217.179:8080/string -d '{"text": "Olá mundo"}'
 ### deletar uma string:
-- tenha \_id da string em mãos
-- curl -X DELETE -H "Content-Type:application/json" http://34.69.217.179:8080/string/*\_id*
+- tenha \_id da string em mãos, ex.: 5d9b952695830f1402f98a2a
+- curl -X DELETE -H "Content-Type:application/json" http://34.69.217.179:8080/string/5d9b952695830f1402f98a2a
 ### modificar uma string:
-- tenha \_id da string em mãos
-- curl -X PUT -H "Content-Type:application/json" http://34.69.217.179:8080/string/*\_id* -d '{"text": "Olá Brasil"}'
+- tenha \_id da string em mãos, ex.: 5d9b952695830f1402f98a2a
+- curl -X PUT -H "Content-Type:application/json" http://34.69.217.179:8080/string/5d9b952695830f1402f98a2a -d '{"text": "Olá Brasil"}'
