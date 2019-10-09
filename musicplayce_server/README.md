@@ -33,3 +33,17 @@
 - express : para fazer o roteamento das operações CRUD na string
 - mongoose : para encapsular o banco de dados utilizado
 - cors : permite requerimentos ajax acessar recuros de hosts remotos
+
+## Google cloud
+
+Há uma aplicação rodando os containers do mongodb e desse server em um solução de cloud da google.
+### ler string:
+- abra com um navegador o site http://34.69.217.179:8080/string/
+### inserir uma string:
+- curl -X POST -H "Content-Type:application/json" http://localhost:8080/string -d '{"text": "Olá mundo"}'
+### deletar uma string:
+- tenha \_id da string em mãos
+- curl -X DELETE -H "Content-Type:application/json" http://localhost:8080/string/*\_id*
+### modificar uma string:
+- tenha \_id da string em mãos
+- curl -X PUT -H "Content-Type:application/json" http://localhost:8080/string/*\_id* -d '{"text": "Olá Brasil"}'
