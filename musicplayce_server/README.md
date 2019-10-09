@@ -6,7 +6,7 @@
 - docker
 - ubuntu 16.04+
 
-## Build
+## build and run
 
 - Primeiro deve-se instalar as dependências listadas acima
 
@@ -24,6 +24,12 @@
 
 - $ docker build -t musicplayce_server .
 
-### Run server
+### run server
 
 - $ docker run -p 8080:8080 -d musicplayce_server
+
+## Pacotes utilizados no app
+
+- express : para fazer o roteamento das operações CRUD na string
+- mongoose : para encapsular o banco de dados utilizado
+- cors : permite requerimentos ajax acessar recuros de hosts remotos
