@@ -4,6 +4,7 @@
 
 - nodejs
 - docker
+- ubuntu 16.04+
 
 ## Build
 
@@ -14,3 +15,15 @@
 - docker pull mongo
 
 - docker run -d -p 27017-27019:27017-27019 --name mongodb mongo
+
+### build server como docker container
+
+- inicialize o comando ifconfig para encontrar o ip do contêiner do mongodb
+
+- modifique o ip do contêiner do mongodb na variável de ambiente DATABASE_URL dentro do arquivo arquivo .env
+
+- $ docker build -t musicplayce_server .
+
+### Run server
+
+- $ docker run -p 8080:8080 -d musicplayce_server
